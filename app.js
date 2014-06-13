@@ -11,5 +11,18 @@
   	this.products = gems;
   });
 
+  app.controller('TabController', function() {
+    this.tab = 1;
+
+    this.setTab = function(tab) {
+      this.tab = tab;
+    };
+
+    this.isSet = function(value) {
+      if(this.tab === value) {
+        return true;
+      }
+    };
+  });
 })();
 
